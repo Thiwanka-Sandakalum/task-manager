@@ -1,0 +1,12 @@
+<div>
+    <h2>Task Form</h2>
+    <form (submit)="submitForm()">
+      <label>Title:</label>
+      <input [(ngModel)]="task.title" name="title" required />
+
+      <label>Completed:</label>
+      <input type="checkbox" [(ngModel)]="task.completed" name="completed" />
+
+      <button type="submit">Save</button>
+    </form>
+  </div>
