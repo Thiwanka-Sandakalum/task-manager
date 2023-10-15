@@ -14,13 +14,13 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'task-manager'`, () => {
+  it(`should have as Title 'task-manager'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('task-manager');
+    expect(app.Title).toEqual('task-manager');
   });
 
-  it('should render title', () => {
+  it('should render Title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;

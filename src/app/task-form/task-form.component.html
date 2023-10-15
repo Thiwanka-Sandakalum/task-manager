@@ -2,10 +2,10 @@
     <h2>Task Form</h2>
     <form (submit)="submitForm()">
       <label>Title:</label>
-      <input [(ngModel)]="task.title" name="title" required />
+      <input [(ngModel)]="task.Title" name="Title" required />
 
       <label>Completed:</label>
-      <input type="checkbox" [(ngModel)]="task.completed" name="completed" />
+      <input type="checkbox" [(ngModel)]="task.Completed" name="Completed" />
 
       <button type="submit">Save</button>
     </form>

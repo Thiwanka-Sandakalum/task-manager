@@ -8,22 +8,22 @@ import { TaskService } from '../task.service';
   styleUrls: ['./task-form.component.css']
 })
 export class TaskFormComponent {
-  @Input() task: Task = { id: 0, title: '', completed: false };
+  @Input() task: Task = { Id: 0, Title: '', Completed: false };
   @Output() formSubmit = new EventEmitter<Task>();
 
   constructor(private taskService: TaskService) {}
 
   submitForm() {
     console.log(this.task)
-    if (this.task.id === 0) {
-      // If the task has no ID, it's a new task, so we'll create it
+    if (this.task.Id === 0) {
+      // If the task has no Id, it's a new task, so we'll create it
       this.taskService.addTask(this.task).subscribe(newTask => {
         this.formSubmit.emit(newTask);
         console.log('Task added successfully');
       });
     } else {
-      // If the task has an ID, it exists, so we'll update it
-      this.taskService.updateTask(this.task.id, this.task).subscribe(updatedTask => {
+      // If the task has an Id, it exists, so we'll update it
+      this.taskService.updateTask(this.task.Id, this.task).subscribe(updatedTask => {
         this.formSubmit.emit(updatedTask);
         console.log('Task updated successfully');
       });
