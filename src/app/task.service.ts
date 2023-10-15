@@ -7,7 +7,7 @@ import { Task } from './task.model';
   providedIn: 'root',
 })
 export class TaskService {
-  private apiUrl = 'https://white-stone-0154f0310.3.azurestaticapps.net/api/tasks';
+  private apiUrl = 'https://newappazurecrud.azurewebsites.net/api/tasks';
 
   constructor(private http: HttpClient) {}
 
